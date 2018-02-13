@@ -6,7 +6,7 @@ A Python game engine in development, which will evaluate both combat and loving 
 
 The game engine is currently just the first draft of an incomplete class definition found in /classes/character.py. The class defines character objects with the following attributes:
 
-- **name**
+- **name** (any printable string)
 
 - **aggro** (any integer value, currently initialized at 50)
 
@@ -18,9 +18,7 @@ The game engine is currently just the first draft of an incomplete class definit
 
 The class currently has the following methods:
 
-- **__repr__()** (returns the character's name string)
-
-- **reaction(other)** (evaluates the character's reaction to other player object, returning a tuple of a wants-to-love flag (-1) or wants-to-fight flag(+1) and a *reaction* integer value)
+- **reaction()** (evaluates the character's reaction to other player object, returning a tuple of a wants-to-love flag (-1) or wants-to-fight flag(+1) and a *reaction* integer value)
 
 - **encounter(other)** (evaluates whether the outcome of the *reaction* of both the character and the other character are a fight or a love, and adjusts the *aggro* , *fought* , and *loved* atttributes for both accordingly)
 
@@ -36,7 +34,7 @@ The algorithm of *encounter()* is also very crude and incomplete:
 >
 > if they add up to 0, then the *reaction* values will have to be resolved together to see whether there is a fight or a love; that part of the algorithm is not developed yet.
 
-# To-Do
+## To-Do
 
 - greatly improve the two existing algorithms
 
@@ -44,6 +42,6 @@ The algorithm of *encounter()* is also very crude and incomplete:
 
 - generally keep working on the engine framework
 
-# Wish List
+## Wish List
 
 - help from math-savvy people to develop the algorithms
