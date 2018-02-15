@@ -1,3 +1,6 @@
+"""A rough framework for characters, featuring joint combat and love resolution and ownership of the mechanics of combat and love by one of the participants.
+"""
+
 from random import randint
 
 class Character:
@@ -18,6 +21,7 @@ class Character:
         self.reaction = (flag, reaction)
 
     def encounter(self, other):
+        #Can be either self.encounter(other) or other.encounter(self)
         if self.reaction[0] + other.reaction[0] > 0:
             self.fought += 1
             self.aggro += 1
